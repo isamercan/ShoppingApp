@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShoppingCartViewController" customModule="ShoppingApp" customModuleProvider="target">
+            <connections>
+                <outlet property="btnCheckout" destination="hrN-Jm-edn" id="i1B-nd-YPn"/>
+                <outlet property="headerView" destination="jyn-V4-eS5" id="Yhx-sh-YBw"/>
+                <outlet property="tableView" destination="Jc5-Zp-9lj" id="Tzo-ra-lG3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jyn-V4-eS5" customClass="HeaderView" customModule="ShoppingApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="59" width="393" height="72"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="72" id="r0u-pX-048"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jc5-Zp-9lj">
+                    <rect key="frame" x="0.0" y="131" width="393" height="687"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="eXT-uo-NTh"/>
+                        <outlet property="delegate" destination="-1" id="4pq-SE-U4G"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrN-Jm-edn">
+                    <rect key="frame" x="32" y="746" width="329" height="48"/>
+                    <color key="backgroundColor" name="primaryColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="XCx-CB-5NY"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Checkout">
+                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="24"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didTapCheckoutAction:" destination="-1" eventType="touchUpInside" id="nxW-il-luz"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="primaryColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Jc5-Zp-9lj" secondAttribute="bottom" id="0Xm-So-hUR"/>
+                <constraint firstItem="Jc5-Zp-9lj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1RH-A2-7pZ"/>
+                <constraint firstItem="jyn-V4-eS5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2YI-Kv-w4z"/>
+                <constraint firstItem="jyn-V4-eS5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4qc-iP-82N"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hrN-Jm-edn" secondAttribute="bottom" constant="24" id="JeI-ty-tNK"/>
+                <constraint firstItem="hrN-Jm-edn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="T35-Ga-7Hm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jyn-V4-eS5" secondAttribute="trailing" id="btF-X9-dgY"/>
+                <constraint firstItem="Jc5-Zp-9lj" firstAttribute="top" secondItem="jyn-V4-eS5" secondAttribute="bottom" id="cd8-KH-N2a"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hrN-Jm-edn" secondAttribute="trailing" constant="32" id="nCa-Pm-zDq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Jc5-Zp-9lj" secondAttribute="trailing" id="vxa-PZ-aWA"/>
+            </constraints>
+            <point key="canvasLocation" x="-22" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="primaryColor">
+            <color red="0.36470588235294116" green="0.24313725490196078" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
